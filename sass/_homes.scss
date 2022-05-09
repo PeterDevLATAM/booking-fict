@@ -1,4 +1,65 @@
-.homes{
-    background-color: $color-secondary;
-    grid-column: center-start/ center-end;
+.homes {
+  background-color: $color-secondary;
+  grid-column: center-start/ center-end;
+  margin: 15rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+
+ 
+
+
+}
+
+.home {
+  background-color: $color-grey-light-1;
+//   position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-items: center;
+
+  &__img {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 1;
+  }
+  &__like {
+    fill: $color-primary;
+    height: 3rem;
+    width: 3rem;
+    // position: absolute;
+    // top: 1.5rem;
+    // right: 1.5rem;
+
+    // Instead using overlaping
+
+    grid-row: 1/2;
+    grid-column: -2/-1;
+    align-self: start;
+    justify-self: end;
+    z-index: 2;
+  }
+  &__name {
+      grid-column: 1/-1;
+  }
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    svg {
+      fill: $color-primary;
+      height: 2rem;
+      width: 2rem;
+    }
+    p {
+    }
+  }
+
+  &__btn{
+      grid-column: 1/-1;
+  }
 }
